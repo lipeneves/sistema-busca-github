@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styled';
 
 export default function Repositories() {
+
+    const [repositories, setRepositories] = useState([]);
+
+    useEffect(() => {
+
+        let repositoriesName = localStorage.getItem('repositoriesName');
+        repositoriesName = JSON.parse(repositoriesName);
+        setRepositories(repositoriesName);
+        localStorage.clear();
+
+    }, []);
+
+
     return (
 
-        <S.Container>    
+        <S.Container>
             <S.Title>Repositórios</S.Title>
             <S.List>
-                <S.listItem>Repositório 01</S.listItem>
-                <S.listItem>Repositório 02</S.listItem>
-                <S.listItem>Repositório 03</S.listItem>
-                <S.listItem>Repositório 04</S.listItem>
-                <S.listItem>Repositório 05</S.listItem>
-                <S.listItem>Repositório 06</S.listItem>
-                <S.listItem>Repositório 07</S.listItem>
-                <S.listItem>Repositório 08</S.listItem>
-                <S.listItem>Repositório 09</S.listItem>
-                <S.listItem>Repositório 10</S.listItem>
+                {repositories.map(repository => {
+                    return (<S.listItem>{repository}</S.listItem>)
+
+                })}
             </S.List>
         </S.Container>
 

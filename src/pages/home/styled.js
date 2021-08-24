@@ -23,7 +23,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-family: sans-serif;
     font-size: 1.5rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: center;
     color: #555;
 `

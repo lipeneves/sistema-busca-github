@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     font-family: sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #555;
 `
@@ -18,9 +18,9 @@ export const List = styled.ul`
 `
 
 export const listItem = styled.li`
-    background: #555;
+    background: #333;
     color: white;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 `
