@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Input = styled.input`
     padding: 10px 10px;
-    width: 250px;
+    width: 150px;
     border-radius: 10px 0px 0px 10px;
 `
 
@@ -26,4 +26,10 @@ export const Title = styled.h1`
     margin-bottom: 20px;
     text-align: center;
     color: #555;
+`
+
+export const Error = styled.p`
+    color: red;
+    font-size: 0.9rem;
+    font-weith: 600;
 `
